@@ -13,6 +13,7 @@
 		E455B868265DF62D005DFF4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E455B867265DF62D005DFF4E /* Preview Assets.xcassets */; };
 		E455B86A265DF62D005DFF4E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455B869265DF62D005DFF4E /* Persistence.swift */; };
 		E455B86D265DF62E005DFF4E /* FreeTradeClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E455B86B265DF62E005DFF4E /* FreeTradeClone.xcdatamodeld */; };
+		E455B876265DF814005DFF4E /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455B875265DF814005DFF4E /* PortfolioView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E455B869265DF62D005DFF4E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E455B86C265DF62E005DFF4E /* FreeTradeClone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FreeTradeClone.xcdatamodel; sourceTree = "<group>"; };
 		E455B86E265DF62E005DFF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E455B875265DF814005DFF4E /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		E455B85F265DF62B005DFF4E /* FreeTradeClone */ = {
 			isa = PBXGroup;
 			children = (
+				E455B874265DF7F9005DFF4E /* screens */,
 				E455B860265DF62B005DFF4E /* FreeTradeCloneApp.swift */,
 				E455B862265DF62B005DFF4E /* ContentView.swift */,
 				E455B864265DF62D005DFF4E /* Assets.xcassets */,
@@ -73,6 +76,14 @@
 				E455B867265DF62D005DFF4E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E455B874265DF7F9005DFF4E /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				E455B875265DF814005DFF4E /* PortfolioView.swift */,
+			);
+			path = screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E455B86A265DF62D005DFF4E /* Persistence.swift in Sources */,
+				E455B876265DF814005DFF4E /* PortfolioView.swift in Sources */,
 				E455B863265DF62B005DFF4E /* ContentView.swift in Sources */,
 				E455B86D265DF62E005DFF4E /* FreeTradeClone.xcdatamodeld in Sources */,
 				E455B861265DF62B005DFF4E /* FreeTradeCloneApp.swift in Sources */,
