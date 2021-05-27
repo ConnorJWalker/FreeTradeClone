@@ -31,13 +31,14 @@ struct ContentView: View {
                     Label("Account", systemImage: "dollarsign.square")
                 }
         }
+        .accentColor(.pink)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
             .previewDevice("iPhone 12 Pro")
     }
 }

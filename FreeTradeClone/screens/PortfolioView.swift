@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PortfolioView: View {
     @State var totalBalanceInPence = 66971
+    @State var originalBalanceInPence = 82000
+    
     private var balancePounds: Int { totalBalanceInPence / 100 }
     private var balancePence: Int { totalBalanceInPence % 100 }
     
@@ -77,6 +79,8 @@ struct PortfolioView: View {
             }
             .padding([.leading, .trailing])
             
+            getBalanceChangeView()
+            
             Spacer()
         }
     }
@@ -88,12 +92,35 @@ struct PortfolioView: View {
     func onFreeSharesClick() {
         
     }
+    
+    @ViewBuilder func getBalanceChangeView() -> some View {
+        let isInProfit = originalBalanceInPence < totalBalanceInPence
+        let icon = isInProfit ? "arrow.up.right" : "arrow.down.right"
+        let change = Double(abs(totalBalanceInPence - originalBalanceInPence)) / 100.0
+        let text = "\(isInProfit ? "Up" : "Down") by £\(String(format: "%.2f", change))"
+        
+        HStack {
+            Group {
+                Image(systemName: icon)
+                Text(text)
+                    .fontWeight(.light)
+                    .padding(.leading, -3)
+            }
+            .foregroundColor(isInProfit ? .green : .red)
+            
+            Text("since you began investing")
+                .fontWeight(.light)
+                .padding(.leading, -3)
+            Spacer()
+        }
+        .padding([.leading, .trailing])
+        .font(.footnote)
+    }
 }
 
 struct PortfolioView_Previews: PreviewProvider {
     static var previews: some View {
         PortfolioView()
-            .preferredColorScheme(.dark)
             .previewDevice("iPhone 12 Pro")
     }
 }
